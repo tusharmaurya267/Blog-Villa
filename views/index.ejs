@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/header.ejs') %>
+
+<body>
+
+    <%- include('./partials/nav.ejs') %>
+
+
+    <% const check ='ALL BLOGS' %>
+
+    <h1>Home</h1>
+    <h2>Your path to becoming a node.js ninja</h2>
+
+    <div class="blogs content">
+        <h2><%= check %></h2>
+        <% if(blogs.length > 0){ %>
+            <% blogs.forEach(blog => { %>
+                <a class="single" href="/blogs/ <%= blog._id  %>" >
+                    <h3 class="title"> <%= blog.title %></h3> 
+                    <p class="snippet"> <%= blog.snippet %></p>
+                </a>
+            <% }) %>
+        <% }else{ %>
+            <p>There are no blogs to display...</p>
+
+        <% } %>
+
+    </div>
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>
