@@ -9,9 +9,9 @@ const app=express();
 
 // PORT setup for online as well as PORT:3000
 let port= process.env.PORT;
-if(port == null || port ==""{
+if(port == null || port ==""){
     port =3000;
-})
+}
 
 // connect to mongo db
 const dbURI = 'mongodb+srv://Tushar:tushar1234@blogs.ewfpwys.mongodb.net/blogs?retryWrites=true&w=majority';
