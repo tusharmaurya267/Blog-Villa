@@ -7,11 +7,17 @@ const blogRoutes = require('./routes/blogRoutes')
 
 const app=express();
 
+// PORT setup for online as well as PORT:3000
+let port= process.env.PORT;
+if(port == null || port ==""{
+    port =3000;
+})
+
 // connect to mongo db
 const dbURI = 'mongodb+srv://Tushar:tushar1234@blogs.ewfpwys.mongodb.net/blogs?retryWrites=true&w=majority';
 mongoose.connect(dbURI, {useNewUrlParser: true, useUnifiedTopology: true})
     .then((result) => console.log("connected to db"))
-    .then((result) =>app.listen(3000))
+    .then((result) =>app.listen(port))
     .catch((err) => console.log(err));
 
 
