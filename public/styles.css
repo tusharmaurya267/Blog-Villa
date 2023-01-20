@@ -5,6 +5,7 @@
       padding: 0 20px;
       font-family: 'Noto Serif', serif;
       max-width: 1200px;
+      background-color: burlywood;
     }
     p, h1, h2, h3, a, ul{
       margin: 0;
@@ -108,4 +109,11 @@
       border: 0;
       font-size: 1.2em;
       cursor: pointer;
+    }
+
+    .about_body{
+      color: aliceblue;
+      /* background-color: black; */
+      margin:100px 100px 50px 50px;
+
     }
